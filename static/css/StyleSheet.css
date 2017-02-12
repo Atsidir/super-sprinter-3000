@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    background: grey;
+}
+
+textarea {
+    width: 220px;
+    height: 100px;
+    margin-left:20px;
+}
+
+.second {
+    width: 220px;
+    height: 15px;
+
+}
+input {
+    margin-left: 20px;
+}
+a {
+    color: black;
+}
+
+p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    height: 450px;
+    width: 300px;
+    background-color: white;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 10px 10px;
+}
+
+#stories thead {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#stories th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+.row {
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+img {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+table {
+    background-color: white;
+}

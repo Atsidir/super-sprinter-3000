@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{url_for('static', filename='css/StyleSheet.css') }}" rel="stylesheet"  type="text/css">
+</head>
+<body>
+<a href={{ url_for("story") }} class="button"> Add a new story</a>
+<table id="stories">
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Story</th>
+        <th>Acceptance</th>
+        <th>Business Value</th>
+        <th>Hours</th>
+        <th>Status</th>
+    </thead>
+    <tbody>
+    {% for story in stories %}
+        <tr>
+            <th>{{ story.id }}</th>
+            <th>{{ story.title }}</th>
+            <th>{{ story.story }}</th>
+            <th>{{ story.acceptance }}</th>
+            <th>{{ story.bvalue }}</th>
+            <th>{{ story.hours }}</th>
+            <th>{{ story.status }}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

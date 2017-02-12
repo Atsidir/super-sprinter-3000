@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{url_for('static', filename='css/StyleSheet.css') }}" rel="stylesheet"  type="text/css">
+    Super Sprinter 3000 Story
+</head>
+<body>
+<center>
+
+<div class="card">
+
+    <div class="container" align="left">
+        <form  method="POST">
+        {% if id !=0 %}
+            <label>
+            Story title:
+            <br>
+            <input type="text" id="title" name="story" style="width: 250px" required maxlength="100" value={{ story.title }}>
+            <br>
+            </label>
+            <label>
+            User Story:
+            <br>
+            <textarea  id="story1" name="story" style="width: 250px;height: 100px" required maxlength="500" >{{ story.story }}</textarea>
+            <br></label>
+            <label>
+            Acceptance Criteria:
+            <br>
+            <textarea id="acceptance" name="story" style="width: 250px;height: 100px" required maxlength="500" >{{ story.acceptance }}</textarea>
+            </label>
+            <br>
+            <label>
+            Business Value:
+            <br>
+            <input type="number" id="bvalue" name="story" min="100" max="1500" step="100"  value={{ story.bvalue }}>
+            </label>
+            <br>
+            <label>
+            Estimation (hour):
+            <br>
+            <input type="number" id="hours" name="story" min="0.5" max="40" step="0.5" value={{ story.hours }}>
+            </label>
+            <br>
+            <label>
+            Status:
+            <br>
+            <select name="story">
+                  <option value="Planning">Planning</option>
+                  <option value="To Do">To Do</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Review">Review</option>
+                  <option value="Done">Done</option>
+            </select>
+            </label>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+        {% else %}
+            Story title:
+            <br>
+            <input type="text" name="story" style="width: 250px" required maxlength="100" >
+            <br>
+            User Story:
+            <br>
+            <textarea  name="story" style="width: 250px;height: 100px" required maxlength="500"></textarea>
+            <br>
+            Acceptance Criteria:
+            <br>
+            <textarea name="story" style="width: 250px;height: 100px" required maxlength="500"></textarea>
+            <br>
+            Business Value:
+            <br>
+            <input type="number" name="story" min="100" max="1500" step="100" value="100">
+            <br>
+            Estimation (hour):
+            <br>
+            <input type="number" name="story" min="0.5" max="40" step="0.5" value="0.5">
+            <br>
+            Status:
+            <br>
+            <select name="story">
+                  <option value="Planning">Planning</option>
+                  <option value="To Do">To Do</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Review">Review</option>
+                  <option value="Done">Done</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% endif %}
+
+    </div>
+</div>
+
+</center>
+</body>
+</html>
