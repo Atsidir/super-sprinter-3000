@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="{{url_for('static', filename='css/StyleSheet.css') }}" rel="stylesheet"  type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/StyleSheet.css') }}" rel="stylesheet">
     Super Sprinter 3000 Story
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <p class="navbar-text navbar-left">School system </p>
+      <a href={{ url_for("base") }} class="btn btn-primary"> Table</a>
+      <a href={{ url_for("index") }} class="btn btn-primary"> Story Cards</a>
+      <a href={{ url_for("story") }} class="btn btn-primary"> Add a new story</a>
+  </div>
+</nav>
 <center>
+<div class="container text-center" style="padding-top: 80px" >
+<div class="card col-md-4" align="left">
 
-<div class="card">
-
-    <div class="container" align="left">
-        <form  method="POST">
+        <form method="POST">
         {% if id !=0 %}
+            <div class="input-group">
             <label>
             Story title:
             <br>
@@ -54,6 +64,7 @@
             </label>
             <br>
             <input type="submit" value="Save">
+            </div>
         </form>
         {% else %}
             Story title:
@@ -93,7 +104,7 @@
 
     </div>
 </div>
-
+</div>
 </center>
 </body>
 </html>

@@ -35,7 +35,9 @@ def story(param=0):
         else:
             return render_template('story.html', id=param)
 
-
+@app.route('/bootstrap',methods=['GET','POST'])
+def boot():
+    return render_template('boot.html')
 
 @app.route('/list', methods=['GET', 'POST'])
 def index():
